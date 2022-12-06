@@ -1,9 +1,18 @@
 # Global Values
-repoUrl: 'https://github.com/aws-samples/eks-blueprints-add-ons.git'
+repoUrl: 'https://github.com/claypotai/gitops-k8s-addons.git'
 targetRevision: HEAD
 region: ''
 account: ''
 clusterName: ''
+
+
+# Flink Operator
+# Workaround for the crd too long issue
+flinkOperatorCrds:
+  enable: false
+
+flinkOperatorSkipCrds:
+  enable: false
 
 # Agones Values
 agones:
