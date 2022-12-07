@@ -17,5 +17,5 @@ appVersion: "1.0"
 dependencies:
 - name: flink-operator
   version: 1.2.0
-  repository: https://github.com/apache/flink-kubernetes-operator
+  repository: https://downloads.apache.org/flink/flink-kubernetes-operator-1.2.0/
   
