@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: add-ons/flink-operator
+    path: add-ons/flink-kubernetes-operator
     targetRevision: {{ .Values.targetRevision }}
     helm:
       skipCRDs: true
