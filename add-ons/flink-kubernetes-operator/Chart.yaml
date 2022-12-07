@@ -1,5 +1,5 @@
 apiVersion: v2
-name: flink-operator
+name: flink-kubernetes-operator
 description: A Helm chart for installing Flink Operator
 
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -15,7 +15,7 @@ version: 0.1.0
 appVersion: "1.0"
 
 dependencies:
-- name: flink-operator
+- name: flink-kubernetes-operator
   version: 1.2.0
   repository: https://downloads.apache.org/flink/flink-kubernetes-operator-1.2.0/
   
