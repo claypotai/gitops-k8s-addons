@@ -1,4 +1,4 @@
-{{- if and (.Values.flink) (.Values.awsForFluentBit.enable) -}}
+{{- if and (.Values.flinkOperatorCrds) (.Values.flinkOperatorCrds.enable) -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
