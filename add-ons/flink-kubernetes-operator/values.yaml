@@ -2,9 +2,12 @@
   flink-kubernetes-operator:
     operatorServiceAccount:
       create: true
+
     watchNamespaces:
+
     operatorPod:
       env:
+      
     metrics.port:
 
     defaultConfiguration:

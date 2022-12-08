@@ -18,15 +18,15 @@ spec:
         {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
       parameters:
       - name: flink-kubernetes-operator.watchNamespaces
-        value: {{ .Values.watchNamespaces }}
+        value: {{ .Values.flinkKubernetesOperator.watchNamespaces }}
       - name: flink-kubernetes-operator.operatorPod.env
-        value: {{ .Values.operatorPodEnv }}
+        value: {{ .Values.flinkKubernetesOperator.operatorPodEnv }}
       - name: flink-kubernetes-operator.metrics.port
-        value: {{ .Values.metricsPort }}
+        value: {{ .Values.flinkKubernetesOperator.metricsPort }}
       - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
-        value: {{ .Values.log4jOperatorProperties }}
+        value: {{ .Values.flinkKubernetesOperator.log4jOperatorProperties }}
       - name: flink-kubernetes-operator.defaultConfiguration.log4j-console.properties
-        value: {{ .Values.log4jConsoleProperties }}
+        value: {{ .Values.flinkKubernetesOperator.log4jConsoleProperties }}
         
       
   destination:
