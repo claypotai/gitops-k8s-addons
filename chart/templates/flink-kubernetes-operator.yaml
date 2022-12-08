@@ -24,7 +24,7 @@ spec:
       # - name: flink-kubernetes-operator.operatorPod.env
       #   value: {{ .Values.flinkKubernetesOperator.operatorPodEnv }}
       - name: flink-kubernetes-operator.metrics.port
-        value: {{ .Values.flinkKubernetesOperator.metricsPort }}
+        value: {{ .Values.flinkKubernetesOperator.metricsPort | quote }}
       - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
         value: {{ .Values.flinkKubernetesOperator.log4jOperatorProperties }}
       - name: flink-kubernetes-operator.defaultConfiguration.log4j-console.properties
