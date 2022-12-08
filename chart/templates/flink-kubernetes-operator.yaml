@@ -17,12 +17,6 @@ spec:
         flink-kubernetes-operator:
         {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
       parameters:
-      # - name: flink-kubernetes-operator.operatorServiceAccount.creates
-      #   value: {{ .Values.flinkKubernetesOperator.operatorServiceAccountCreate }}
-      # - name: flink-kubernetes-operator.watchNamespaces
-      #   value: {{ .Values.flinkKubernetesOperator.watchNamespaces }}
-      # - name: flink-kubernetes-operator.operatorPod.env
-      #   value: {{ .Values.flinkKubernetesOperator.operatorPodEnv }}
       - name: flink-kubernetes-operator.metrics.port
         value: {{ .Values.flinkKubernetesOperator.metricsPort | quote }}
       - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
