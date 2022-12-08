@@ -3,7 +3,9 @@
   watchNamespaces:
   operatorPod:
     env:
-    
+    - name: TEST_ENV
+      value: originalval
+
   metrics.port:
 
   defaultConfiguration:
