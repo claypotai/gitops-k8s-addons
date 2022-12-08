@@ -6,8 +6,7 @@ account: ''
 clusterName: ''
 
 
-# Flink Operator
-# Workaround for the crd too long issue
+# Flink Operator Values
 flinkKubernetesOperator:
   enable: false
   watchNamespaces:
