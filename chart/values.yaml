@@ -9,7 +9,7 @@ clusterName: ''
 # Flink Operator
 flinkKubernetesOperator:
   enable: false
-  operatorPodEnv: [{"TEST1":"test2"}]
+  operatorServiceAccountCreate: false
 
 # Agones Values
 agones:
