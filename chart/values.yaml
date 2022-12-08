@@ -9,6 +9,8 @@ clusterName: ''
 # Flink Operator
 flinkKubernetesOperator:
   enable: false
+  operatorPod:
+    env: [{"TEST1":"test2"}]
 
 # Agones Values
 agones:
