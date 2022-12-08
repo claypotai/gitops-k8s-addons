@@ -1,13 +1,14 @@
 # https://nightlies.apache.org/flink/flink-kubernetes-operator-docs-main/docs/operations/helm/
-  operatorServiceAccount.create: true
-  watchNamespaces:
-  operatorPod.env:
-    - name: TEST_ENV
-      value: originalval
+  flink-kubernetes-operator:
+    operatorServiceAccount.create: true
+    watchNamespaces:
+    operatorPod.env:
+      - name: TEST_ENV
+        value: originalval
 
-  metrics.port:
+    metrics.port:
 
-  defaultConfiguration:
-    log4j-operator.properties:
+    defaultConfiguration:
+      log4j-operator.properties:
 
-    log4j-console.properties:
+      log4j-console.properties:
