@@ -6,13 +6,11 @@ account: ''
 clusterName: ''
 
 
-# Flink Operator Values
+# Flink Operator
 flinkKubernetesOperator:
   enable: false
   watchNamespaces:
-  operatorPodEnv:
-    - name: "ENV_test"
-      value: "newVal"
+  operatorPodEnv: ["ENV_test": "newVal"]
   metricsPort:
   log4jOperatorProperties:
   log4jConsoleProperties:
