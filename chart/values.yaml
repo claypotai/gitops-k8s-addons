@@ -9,7 +9,6 @@ clusterName: ''
 # Flink Operator
 flinkKubernetesOperator:
   enable: false
-  metricsPort:
 
 # Agones Values
 agones:
