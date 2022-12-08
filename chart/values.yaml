@@ -10,11 +10,9 @@ clusterName: ''
 # Workaround for the crd too long issue
 flinkKubernetesOperator:
   enable: false
-  watchNamespaces:
   operatorPodEnv:
-  metricsPort:
-  log4jOperatorProperties:
-  log4jConsoleProperties:
+    - name: "ENV_test"
+      value: "newVal"
 
 # Agones Values
 agones:
