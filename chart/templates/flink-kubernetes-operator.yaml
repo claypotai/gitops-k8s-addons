@@ -15,7 +15,7 @@ spec:
     helm:
       values: |
         flink-kubernetes-operator:
-        {{- toYaml .Values.flinkOperatorCrds | nindent 10 }}
+        {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
       parameters:
       - name: flink-kubernetes-operator.watchNamespaces
         value: {{ .Values.watchNamespaces }}

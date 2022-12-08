@@ -3,6 +3,7 @@ flink-kubernetes-operator:
   operatorServiceAccount.create: true
   watchNamespaces:
   operatorPod.env:
+    testEnv: "originaltest"
   metrics.port:
   defaultConfiguration.log4j-operator.properties:
   defaultConfiguration.log4j-console.properties:
