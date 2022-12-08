@@ -23,6 +23,11 @@ spec:
         value: {{ .Values.flinkKubernetesOperator.operatorPodEnv }}
       - name: flink-kubernetes-operator.metrics.port
         value: {{ .Values.flinkKubernetesOperator.metricsPort }}
+      - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
+        value: {{ .Values.flinkKubernetesOperator.log4jOperatorProperties }}
+      - name: flink-kubernetes-operator.defaultConfiguration.log4j-console.properties
+        value: {{ .Values.flinkKubernetesOperator.log4jConsoleProperties }}
+        
       
   destination:
     server: https://kubernetes.default.svc

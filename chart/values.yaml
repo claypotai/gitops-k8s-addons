@@ -9,11 +9,6 @@ clusterName: ''
 # Flink Operator
 flinkKubernetesOperator:
   enable: false
-  watchNamespaces:
-  operatorPodEnv: ["ENV_test": "newVal"]
-  metricsPort:
-  log4jOperatorProperties:
-  log4jConsoleProperties:
 
 # Agones Values
 agones:
