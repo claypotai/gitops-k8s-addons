@@ -1,5 +1,4 @@
 # https://nightlies.apache.org/flink/flink-kubernetes-operator-docs-main/docs/operations/helm/
-flink-kubernetes-operator:
   operatorServiceAccount.create: true
   watchNamespaces:
   operatorPod.env:
