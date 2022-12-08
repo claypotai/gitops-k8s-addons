@@ -10,9 +10,20 @@ clusterName: ''
 # Workaround for the crd too long issue
 flinkOperatorCrds:
   enable: false
+  watchNamespaces:
+  operatorPod.env:
+  metrics.port:
+  defaultConfiguration.log4j-operator.properties:
+  defaultConfiguration.log4j-console.properties:
+
 
 flinkOperatorSkipCrds:
   enable: false
+  watchNamespaces:
+  operatorPod.env:
+  metrics.port: 
+  defaultConfiguration.log4j-operator.properties:
+  defaultConfiguration.log4j-console.properties:
 
 # Agones Values
 agones:

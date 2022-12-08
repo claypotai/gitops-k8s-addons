@@ -1,6 +1,6 @@
-
-# watchNamespaces:
-# operatorPod.env:
-# metrics.port:
-# defaultConfiguration.log4j-operator.properties:
-# defaultConfiguration.log4j-console.properties:
+# https://nightlies.apache.org/flink/flink-kubernetes-operator-docs-main/docs/operations/helm/
+watchNamespaces:
+operatorPod.env:
+metrics.port:
+defaultConfiguration.log4j-operator.properties:
+defaultConfiguration.log4j-console.properties:
