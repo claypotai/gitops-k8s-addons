@@ -1,7 +1,7 @@
 # https://nightlies.apache.org/flink/flink-kubernetes-operator-docs-main/docs/operations/helm/
   flink-kubernetes-operator:
     metrics:
-      port:
+      port: 
 
     defaultConfiguration:
       log4j-operator.properties:
