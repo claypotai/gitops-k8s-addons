@@ -9,7 +9,6 @@ clusterName: ''
 # Flink Operator
 flinkKubernetesOperator:
   enable: false
-  operatorServiceAccountCreate: false
 
 # Agones Values
 agones:
