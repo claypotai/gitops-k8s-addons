@@ -17,37 +17,30 @@ spec:
         flink-kubernetes-operator:
         {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
       parameters:
-      {{- if (.Values.flinkKubernetesOperator.operatorServiceAccountCreate) -}}
       - name: flink-kubernetes-operator.operatorServiceAccount.creates
-        value: "{{ .Values.flinkKubernetesOperator.operatorServiceAccountCreate }}"
-      {{- end -}}
-
-      {{- if (.Values.flinkKubernetesOperator.watchNamespaces) -}}
+        value: {{ ((.Values.flinkKubernetesOperator.operatorServiceAccountCreate)) }}
       - name: flink-kubernetes-operator.watchNamespaces
-        value: {{ .Values.flinkKubernetesOperator.watchNamespaces }}
-      {{- end -}}
-
-      {{- if (.Values.flinkKubernetesOperator.operatorPodEnv) -}}
-      - name: flink-kubernetes-operator.operatorPod.env
-        value: {{ .Values.flinkKubernetesOperator.operatorPodEnv }}
-      {{- end -}}
-
-      {{- if (.Values.flinkKubernetesOperator.metricsPort) -}}
-      - name: flink-kubernetes-operator.metrics.port
-        value: {{ .Values.flinkKubernetesOperator.metricsPort }}
-      {{- end -}}
-
-      {{- if (.Values.flinkKubernetesOperator.log4jOperatorProperties) -}}
-      - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
-        value: {{ .Values.flinkKubernetesOperator.log4jOperatorProperties }}
-      {{- end -}}
-
-      {{- if (.Values.flinkKubernetesOperator.log4jConsoleProperties) -}}
-      - name: flink-kubernetes-operator.defaultConfiguration.log4j-console.properties
-        value: {{ .Values.flinkKubernetesOperator.log4jConsoleProperties }}
-      {{- end -}}
-        
+        value: {{ ((.Values.flinkKubernetesOperator.watchNamespaces)) }}
       
+      # {{- if (.Values.flinkKubernetesOperator.operatorPodEnv) -}}
+      # - name: flink-kubernetes-operator.operatorPod.env
+      #   value: {{ .Values.flinkKubernetesOperator.operatorPodEnv }}
+      # {{- end -}}
+
+      # {{- if (.Values.flinkKubernetesOperator.metricsPort) -}}
+      # - name: flink-kubernetes-operator.metrics.port
+      #   value: {{ .Values.flinkKubernetesOperator.metricsPort }}
+      # {{- end -}}
+
+      # {{- if (.Values.flinkKubernetesOperator.log4jOperatorProperties) -}}
+      # - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
+      #   value: {{ .Values.flinkKubernetesOperator.log4jOperatorProperties }}
+      # {{- end -}}
+
+      # {{- if (.Values.flinkKubernetesOperator.log4jConsoleProperties) -}}
+      # - name: flink-kubernetes-operator.defaultConfiguration.log4j-console.properties
+      #   value: {{ .Values.flinkKubernetesOperator.log4jConsoleProperties }}
+      # {{- end -}}
   destination:
     server: https://kubernetes.default.svc
     namespace: flink-operator
