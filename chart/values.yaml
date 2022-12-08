@@ -11,10 +11,10 @@ clusterName: ''
 flinkKubernetesOperator:
   enable: false
   watchNamespaces:
-  operatorPod.env:
-  metrics.port:
-  defaultConfiguration.log4j-operator.properties:
-  defaultConfiguration.log4j-console.properties:
+  operatorPodEnv:
+  metricsPort:
+  log4jOperatorProperties:
+  log4jConsoleProperties:
 
 # Agones Values
 agones:

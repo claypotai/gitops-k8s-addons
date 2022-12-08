@@ -19,10 +19,15 @@ spec:
       parameters:
       - name: flink-kubernetes-operator.watchNamespaces
         value: {{ .Values.watchNamespaces }}
-      - name: flink-kubernetes-operator.operatorPod.env
+      - name: flink-kubernetes-operator.operatorPodEnv
         value: {{ .Values.operatorPod.env }}
-      - name: flink-kubernetes-operator.metrics.port
+      - name: flink-kubernetes-operator.metricsPort
         value: {{ .Values.metrics.port }}
+      - name: flink-kubernetes-operator.log4jOperatorProperties
+        value: {{ .Values.defaultConfiguration.log4j-operator.properties }}
+      - name: flink-kubernetes-operator.log4jConsoleProperties
+        value: {{ .Values.defaultConfiguration.log4j-console.properties }}
+        
       
   destination:
     server: https://kubernetes.default.svc
