@@ -17,7 +17,7 @@ spec:
         flink-kubernetes-operator:
         {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
       parameters:
-      - name: flink-kubernetes-operator.operatorServiceAccount.create:
+      - name: flink-kubernetes-operator.operatorServiceAccount.creates
         value: {{ .Values.flinkKubernetesOperator.operatorServiceAccountCreate }}
       # - name: flink-kubernetes-operator.watchNamespaces
       #   value: {{ .Values.flinkKubernetesOperator.watchNamespaces }}
