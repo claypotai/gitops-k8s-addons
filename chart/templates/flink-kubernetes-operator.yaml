@@ -1,4 +1,4 @@
-{{- if and (.Values.flinkKubernetesOperator) (.Values.flinkKubernetesOperator.enable) -}}
+# {{- if and (.Values.flinkKubernetesOperator) (.Values.flinkKubernetesOperator.enable) -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -23,10 +23,6 @@ spec:
         value: {{ .Values.operatorPod.env }}
       - name: flink-kubernetes-operator.metrics.port
         value: {{ .Values.metrics.port }}
-      - name: flink-kubernetes-operator.defaultConfiguration.log4j-operator.properties
-        value: {{ .Values.defaultConfiguration.log4j-operator.properties }}
-      - name: flink-kubernetes-operator.defaultConfiguration.log4j-console.properties
-        value: {{ .Values.defaultConfiguration.log4j-console.properties }}
       
   destination:
     server: https://kubernetes.default.svc
@@ -40,5 +36,5 @@ spec:
         duration: 5s
         factor: 2
         maxDuration: 1m
-{{- end -}}
+# {{- end -}}
     
