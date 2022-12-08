@@ -3,7 +3,8 @@
     operatorServiceAccount:
       create: true
     watchNamespaces:
-    operatorPod.env:
+    operatorPod:
+      env:
     metrics.port:
 
     defaultConfiguration:
