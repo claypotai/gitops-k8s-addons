@@ -16,10 +16,6 @@ spec:
       values: |
         flink-kubernetes-operator:
         {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
-      parameters:
-      - name: flink-kubernetes-operator.metrics.port
-        value: {{ .Values.flinkKubernetesOperator.metricsPort | quote }}
-  
 
   destination:
     server: https://kubernetes.default.svc
