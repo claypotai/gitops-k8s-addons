@@ -37,20 +37,11 @@ flink-kubernetes-operator:
       
     log4j-console.properties: |+
       # Flink Deployment Logging Overrides
-      rootLogger.level = DEBUG
-      rootLogger.appenderRef.console.ref = ConsoleAppender
-      appender.console.name = ConsoleAppender
-      appender.console.type = CONSOLE
-      appender.console.layout.type = PatternLayout
-      appender.console.layout.pattern = %d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %-60c %x - %m%n
-      rootLogger.appenderRef.rolling.ref = RollingAppender
-      log4j.appender.rolling=org.apache.log4j.RollingFileAppender
-      log4j.appender.rolling.name=RollingAppender
-      log4j.appender.rolling.immediateFlush=true
-      log4j.appender.rolling.File=/tmp/flink/checkpoint/claypotAI.log
-      log4j.appender.rolling.Append=true
-      log4j.appender.rolling.MaxFileSize=10MB
-      log4j.appender.rolling.MaxBackupIndex=5
-      log4j.appender.rolling.layout=org.apache.log4j.PatternLayout
-      log4j.appender.rolling.layout.ConversionPattern=%d %d{Z} [%t] %-5p (%F:%L) - %m%n
+      rootLogger.appenderRef.file.ref = LogFile
+      appender.file.name = LogFile
+      appender.file.type = File
+      appender.file.append = false
+      appender.file.fileName = ${sys:log.file}
+      appender.file.layout.type = PatternLayout
+      appender.file.layout.pattern = %d{yyyy-MM-dd HH:mm:ss,SSS} %-5p %-60c %x - %m%n  
       
