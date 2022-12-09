@@ -17,8 +17,6 @@ spec:
         flink-kubernetes-operator:
         {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
       parameters:
-      - name: flink-kubernetes-operator.webhook.create
-        value: {{ .Values.flinkKubernetesOperator.webhookCreate | quote }}
       - name: flink-kubernetes-operator.metrics.port
         value: {{ .Values.flinkKubernetesOperator.metricsPort | quote }}
   
