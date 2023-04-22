@@ -1,8 +1,8 @@
-{{- if and (.Values.flinkKubernetesOperator) (.Values.flinkKubernetesOperator.enable) -}}
+{{- if and (.Values.loki) (.Values.loki.enable) -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: flink-kubernetes-operator
+  name: loki
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -10,21 +10,18 @@ spec:
   project: default
   source:
     repoURL: {{ .Values.repoUrl }}
-    path: add-ons/flink-kubernetes-operator
+    path: add-ons/loki
     targetRevision: {{ .Values.targetRevision }}
     helm:
       values: |
-        flink-kubernetes-operator:
-        {{- toYaml .Values.flinkKubernetesOperator | nindent 10 }}
-
+        loki:
+        {{- toYaml .Values.loki | nindent 10 }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: flink-operator
+    namespace: {{ .Values.loki.namespace }}
   syncPolicy:
     automated:
       prune: true
-    syncOptions:
-    - CreateNamespace=true
     retry:
       limit: 1
       backoff:
@@ -32,4 +29,3 @@ spec:
         factor: 2
         maxDuration: 1m
 {{- end -}}
-    

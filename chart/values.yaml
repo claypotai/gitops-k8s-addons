@@ -1,14 +1,13 @@
 # Global Values
 repoUrl: 'https://github.com/claypotai/gitops-k8s-addons.git'
-targetRevision: HEAD
+targetRevision: release-firewood
 region: ''
 account: ''
 clusterName: ''
 
-
-# Flink Operator
-flinkKubernetesOperator:
+loki:
   enable: false
+  namespace: loki
 
 # Agones Values
 agones:
@@ -102,6 +101,7 @@ grafana:
   enable: false
   serviceAccount:
     create: false
+  namespace: prom-stack
 
 # Karpenter Values
 karpenter:
@@ -190,8 +190,9 @@ kubernetesDashboard:
 # promtail Values
 promtail:
   enable: false
+  namespace: promtail
 
-# kubecost Values
+# becost Values
 kubecost:
   enable: false
 
@@ -214,6 +215,7 @@ reloader:
 # Kube Prometheus Stack
 kubePrometheusStack:
   enable: false
+  namespace: prom-stack
 
 # Kyverno Values
 kyverno:
